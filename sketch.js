@@ -4,6 +4,7 @@ let a = 1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+//tamaño circulo del nodo inicial
   c_nodo0 = new CNodo( windowWidth/15, windowHeight/2);
   nodo0 = new Node(0);
   execute();
@@ -42,12 +43,14 @@ class CNodo{
     this.posY = posy;
   }
   dr(){
+//tamaño circulo de cada nodo
     circle(this.posX, this.posY, windowHeight/7);
   }
 }
 
 function multiD(i){
   a += 1
+  //posiciones de los nodos, divide pantalla en 13 verticalmente y en 6 horizontalmente
   eval('c_nodo'+(1+(5*i))+' = new CNodo('+a+'*windowWidth/'+(13)+',windowHeight/'+6+')');
   eval('c_nodo'+(2+(5*i))+' = new CNodo('+a+'*windowWidth/'+(13)+',2*windowHeight/'+6+')');
   eval('c_nodo'+(3+(5*i))+' = new CNodo('+a+'*windowWidth/'+(13)+',3*windowHeight/'+6+')');

@@ -43,6 +43,7 @@ function setup() {
   f = picture()
   c_nodo0 = new CNodo( windowWidth/15, windowHeight/2, n , 0 , c , ex , f);
   append(selec, c_nodo0)
+  append(selec, c_nodo0)
   imagenes.splice(f, 1)
   nodo0 = new Node(0);
   execute(n);
